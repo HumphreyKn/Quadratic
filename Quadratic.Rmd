@@ -1,0 +1,15 @@
+---
+title: "Quadratic_function"
+author: "Humphery"
+date: '2022-05-31'
+output: word_document
+---
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+
+
+
+```
+
