@@ -9,7 +9,17 @@ output: word_document
 knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
 
+```
 
+A quadratic equation is an equation of the form $ax^2+bx+c=0$, where `a`, `b`, and `c` are constants. One can solve the value of `x` given the values of `a`, `b` and `c` using the quadratic formula below:
+$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a},\qquad where\quad a\neq0 $$
+The roots are real and distinct when the discriminant $b^2-4ac$ is equal to zero, real and equal when the discriminant is equal to 0 and complex if the discriminant is less than zero.
+The function is:
 
+```{r}
+quadratic= function(a,b,c){
+  x=(-b+c(-1,1)*(sqrt(b^2-(4*a*c))))/(2*a)
+  x
+}
 ```
 
