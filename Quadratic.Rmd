@@ -1,13 +1,14 @@
 ---
-title: "Quadratic_function"
-author: "Humphery"
+title: "Quadratic Function"
+author: "Humphrey"
 date: '2022-05-31'
-output: word_document
+output:
+  pdf_document: default
+  word_document: default
 ---
 
 ```{r setup, include=TRUE}
-knitr::opts_chunk$set(echo = FALSE)
-library(tidyverse)
+knitr::opts_chunk$set(echo = T, message = F, warning = F)
 
 ```
 
@@ -23,3 +24,24 @@ quadratic= function(a,b,c){
 }
 ```
 
+Lets take for example the equation $x^2-45x+324$. The roots are real and distinct. In this case, `a=1`, `b=-45` and `c=324`. We pass a,b and c as the arguments of the function and the pair of roots is generated.
+```{r}
+quadratic(a=1,b=-45,c=324)
+```
+However, this will not work in the case of complex roots. The below function will tell you if the roots are complex.
+```{r}
+quadratic2 = function(a, b, c){
+  discriminant = b^2 - 4*a*c
+  x1 = (-b - sqrt(discriminant))/(2*a)
+  x2 = (-b + sqrt(discriminant))/(2*a)
+  if (discriminant < 0){
+    cat("The roots are complex");
+     
+  }
+  else
+  
+  cat("The two roots are", x1, "and", x2, "\n");
+}
+```
+
+Click [here](https://github.com/HumphreyKn) to Follow me on Github
